@@ -1,24 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OYn-Sb-L70">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Home-->
+        <scene sceneID="gJv-Bi-tL7">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="UaE-Vs-kWM" customClass="HomeViewController" customModule="DesafioSextaFeira13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Omx-wZ-lPW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="haz-QU-0uW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="6BO-HJ-ZUi"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffO-3S-XUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-2210" y="830"/>
+        </scene>
+        <!--Busca-->
+        <scene sceneID="U7n-U3-rMU">
+            <objects>
+                <viewController id="oqX-Bb-wWI" customClass="BuscaViewController" customModule="DesafioSextaFeira13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cUV-Es-Pyf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Udg-1c-HeN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Busca" id="oJ1-It-Fgl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MWQ-Ut-Lh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1428" y="830"/>
+        </scene>
+        <!--Filtro-->
+        <scene sceneID="SPb-LG-0o6">
+            <objects>
+                <viewController id="6Fu-40-wwq" customClass="FiltroViewController" customModule="DesafioSextaFeira13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xLx-zj-5eE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vBT-FY-atO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Filtro" id="6O7-qD-tVR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZS-ql-GU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-609" y="830"/>
+        </scene>
+        <!--Amigos-->
+        <scene sceneID="LAo-cQ-DMP">
+            <objects>
+                <viewController id="ceK-gg-soO" customClass="AmigosViewController" customModule="DesafioSextaFeira13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hdb-oq-vaN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ADQ-Nt-9rj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Amigos" id="fnL-R4-Wn8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2g-En-gPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="830"/>
+        </scene>
+        <!--Configurações-->
+        <scene sceneID="PFA-Dc-mqa">
+            <objects>
+                <viewController id="XkP-Ul-US6" customClass="ConfiguracoesViewController" customModule="DesafioSextaFeira13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p3G-jS-LFT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2DM-56-5k0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Configurações" id="nlm-gg-wUP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tOW-nf-QsQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="830"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="AIO-1c-e1e">
+            <objects>
+                <tabBarController id="OYn-Sb-L70" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="maL-3e-ps3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="oqX-Bb-wWI" kind="relationship" relationship="viewControllers" id="np5-wc-hsK"/>
+                        <segue destination="UaE-Vs-kWM" kind="relationship" relationship="viewControllers" id="rsp-ht-u2e"/>
+                        <segue destination="6Fu-40-wwq" kind="relationship" relationship="viewControllers" id="ZpS-Rz-Tuo"/>
+                        <segue destination="ceK-gg-soO" kind="relationship" relationship="viewControllers" id="bAP-3r-nem"/>
+                        <segue destination="XkP-Ul-US6" kind="relationship" relationship="viewControllers" id="TH2-we-dZb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pA4-1I-Pdn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458" y="-316"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

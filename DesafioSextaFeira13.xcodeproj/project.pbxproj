@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		6DF7A82F282FBB28006E0915 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A82E282FBB28006E0915 /* AppDelegate.swift */; };
 		6DF7A831282FBB28006E0915 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A830282FBB28006E0915 /* SceneDelegate.swift */; };
-		6DF7A833282FBB28006E0915 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A832282FBB28006E0915 /* ViewController.swift */; };
+		6DF7A833282FBB28006E0915 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A832282FBB28006E0915 /* HomeViewController.swift */; };
 		6DF7A836282FBB28006E0915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7A834282FBB28006E0915 /* Main.storyboard */; };
 		6DF7A838282FBB2B006E0915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7A837282FBB2B006E0915 /* Assets.xcassets */; };
 		6DF7A83B282FBB2B006E0915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DF7A839282FBB2B006E0915 /* LaunchScreen.storyboard */; };
 		6DF7A846282FBB2B006E0915 /* DesafioSextaFeira13Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A845282FBB2B006E0915 /* DesafioSextaFeira13Tests.swift */; };
 		6DF7A850282FBB2B006E0915 /* DesafioSextaFeira13UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A84F282FBB2B006E0915 /* DesafioSextaFeira13UITests.swift */; };
 		6DF7A852282FBB2B006E0915 /* DesafioSextaFeira13UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A851282FBB2B006E0915 /* DesafioSextaFeira13UITestsLaunchTests.swift */; };
+		6DF7A85F282FBC56006E0915 /* BuscaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A85E282FBC56006E0915 /* BuscaViewController.swift */; };
+		6DF7A861282FBC68006E0915 /* FiltroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A860282FBC68006E0915 /* FiltroViewController.swift */; };
+		6DF7A863282FBC73006E0915 /* AmigosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A862282FBC73006E0915 /* AmigosViewController.swift */; };
+		6DF7A865282FBC84006E0915 /* ConfiguracoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A864282FBC84006E0915 /* ConfiguracoesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,7 @@
 		6DF7A82B282FBB28006E0915 /* DesafioSextaFeira13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioSextaFeira13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF7A82E282FBB28006E0915 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DF7A830282FBB28006E0915 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6DF7A832282FBB28006E0915 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6DF7A832282FBB28006E0915 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6DF7A835282FBB28006E0915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6DF7A837282FBB2B006E0915 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DF7A83A282FBB2B006E0915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		6DF7A84B282FBB2B006E0915 /* DesafioSextaFeira13UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioSextaFeira13UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF7A84F282FBB2B006E0915 /* DesafioSextaFeira13UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioSextaFeira13UITests.swift; sourceTree = "<group>"; };
 		6DF7A851282FBB2B006E0915 /* DesafioSextaFeira13UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioSextaFeira13UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6DF7A85E282FBC56006E0915 /* BuscaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscaViewController.swift; sourceTree = "<group>"; };
+		6DF7A860282FBC68006E0915 /* FiltroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroViewController.swift; sourceTree = "<group>"; };
+		6DF7A862282FBC73006E0915 /* AmigosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigosViewController.swift; sourceTree = "<group>"; };
+		6DF7A864282FBC84006E0915 /* ConfiguracoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracoesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +109,15 @@
 			children = (
 				6DF7A82E282FBB28006E0915 /* AppDelegate.swift */,
 				6DF7A830282FBB28006E0915 /* SceneDelegate.swift */,
-				6DF7A832282FBB28006E0915 /* ViewController.swift */,
+				6DF7A832282FBB28006E0915 /* HomeViewController.swift */,
 				6DF7A834282FBB28006E0915 /* Main.storyboard */,
 				6DF7A837282FBB2B006E0915 /* Assets.xcassets */,
 				6DF7A839282FBB2B006E0915 /* LaunchScreen.storyboard */,
 				6DF7A83C282FBB2B006E0915 /* Info.plist */,
+				6DF7A85E282FBC56006E0915 /* BuscaViewController.swift */,
+				6DF7A860282FBC68006E0915 /* FiltroViewController.swift */,
+				6DF7A862282FBC73006E0915 /* AmigosViewController.swift */,
+				6DF7A864282FBC84006E0915 /* ConfiguracoesViewController.swift */,
 			);
 			path = DesafioSextaFeira13;
 			sourceTree = "<group>";
@@ -258,8 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DF7A833282FBB28006E0915 /* ViewController.swift in Sources */,
+				6DF7A861282FBC68006E0915 /* FiltroViewController.swift in Sources */,
+				6DF7A833282FBB28006E0915 /* HomeViewController.swift in Sources */,
+				6DF7A865282FBC84006E0915 /* ConfiguracoesViewController.swift in Sources */,
+				6DF7A85F282FBC56006E0915 /* BuscaViewController.swift in Sources */,
 				6DF7A82F282FBB28006E0915 /* AppDelegate.swift in Sources */,
+				6DF7A863282FBC73006E0915 /* AmigosViewController.swift in Sources */,
 				6DF7A831282FBB28006E0915 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
