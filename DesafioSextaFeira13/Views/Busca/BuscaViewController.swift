@@ -34,6 +34,15 @@ class BuscaViewController: UIViewController {
         filmesBuscaTableView.dataSource = self
         tituloFilmeTextfield.delegate = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "buscaParaDetalhesSegue" {
+            if let telaDetalhes = segue.destination as? DetalhesFilmeViewController {
+                guard let filmeEscolhido = sender as? Filme else { return }
+                telaDetalhes.filme = filmeEscolhido
+            }
+        }
+    }
 }
 extension BuscaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,7 +58,8 @@ extension BuscaViewController: UITableViewDataSource {
 }
 extension BuscaViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let filmeSelecionado = filmesEncontrados[indexPath.row]
+        performSegue(withIdentifier: "buscaParaDetalhesSegue", sender: filmeSelecionado)
     }
 }
 extension BuscaViewController: UITextFieldDelegate {
