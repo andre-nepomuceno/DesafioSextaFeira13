@@ -20,6 +20,12 @@
 		6DF7A861282FBC68006E0915 /* FiltroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A860282FBC68006E0915 /* FiltroViewController.swift */; };
 		6DF7A863282FBC73006E0915 /* AmigosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A862282FBC73006E0915 /* AmigosViewController.swift */; };
 		6DF7A865282FBC84006E0915 /* ConfiguracoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A864282FBC84006E0915 /* ConfiguracoesViewController.swift */; };
+		6DF7A868283159AD006E0915 /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A867283159AD006E0915 /* Filme.swift */; };
+		6DF7A86A28315AC5006E0915 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A86928315AC5006E0915 /* Usuario.swift */; };
+		6DF7A86C28315DF0006E0915 /* BancoDeDados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A86B28315DF0006E0915 /* BancoDeDados.swift */; };
+		6DF7A86E2831A5C3006E0915 /* FilmesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A86D2831A5C3006E0915 /* FilmesCollectionViewCell.swift */; };
+		6DF7A8722831C055006E0915 /* FilmesFiltroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A8712831C055006E0915 /* FilmesFiltroCollectionViewCell.swift */; };
+		6DF7A8742831D31A006E0915 /* AmigosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A8732831D31A006E0915 /* AmigosTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,12 @@
 		6DF7A860282FBC68006E0915 /* FiltroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroViewController.swift; sourceTree = "<group>"; };
 		6DF7A862282FBC73006E0915 /* AmigosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigosViewController.swift; sourceTree = "<group>"; };
 		6DF7A864282FBC84006E0915 /* ConfiguracoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracoesViewController.swift; sourceTree = "<group>"; };
+		6DF7A867283159AD006E0915 /* Filme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filme.swift; sourceTree = "<group>"; };
+		6DF7A86928315AC5006E0915 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		6DF7A86B28315DF0006E0915 /* BancoDeDados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BancoDeDados.swift; sourceTree = "<group>"; };
+		6DF7A86D2831A5C3006E0915 /* FilmesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmesCollectionViewCell.swift; sourceTree = "<group>"; };
+		6DF7A8712831C055006E0915 /* FilmesFiltroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmesFiltroCollectionViewCell.swift; sourceTree = "<group>"; };
+		6DF7A8732831D31A006E0915 /* AmigosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigosTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,7 @@
 		6DF7A82D282FBB28006E0915 /* DesafioSextaFeira13 */ = {
 			isa = PBXGroup;
 			children = (
+				6DF7A86628315996006E0915 /* Models */,
 				6DF7A82E282FBB28006E0915 /* AppDelegate.swift */,
 				6DF7A830282FBB28006E0915 /* SceneDelegate.swift */,
 				6DF7A832282FBB28006E0915 /* HomeViewController.swift */,
@@ -118,6 +131,9 @@
 				6DF7A860282FBC68006E0915 /* FiltroViewController.swift */,
 				6DF7A862282FBC73006E0915 /* AmigosViewController.swift */,
 				6DF7A864282FBC84006E0915 /* ConfiguracoesViewController.swift */,
+				6DF7A86D2831A5C3006E0915 /* FilmesCollectionViewCell.swift */,
+				6DF7A8712831C055006E0915 /* FilmesFiltroCollectionViewCell.swift */,
+				6DF7A8732831D31A006E0915 /* AmigosTableViewCell.swift */,
 			);
 			path = DesafioSextaFeira13;
 			sourceTree = "<group>";
@@ -137,6 +153,16 @@
 				6DF7A851282FBB2B006E0915 /* DesafioSextaFeira13UITestsLaunchTests.swift */,
 			);
 			path = DesafioSextaFeira13UITests;
+			sourceTree = "<group>";
+		};
+		6DF7A86628315996006E0915 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6DF7A867283159AD006E0915 /* Filme.swift */,
+				6DF7A86928315AC5006E0915 /* Usuario.swift */,
+				6DF7A86B28315DF0006E0915 /* BancoDeDados.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,9 +299,15 @@
 				6DF7A861282FBC68006E0915 /* FiltroViewController.swift in Sources */,
 				6DF7A833282FBB28006E0915 /* HomeViewController.swift in Sources */,
 				6DF7A865282FBC84006E0915 /* ConfiguracoesViewController.swift in Sources */,
+				6DF7A868283159AD006E0915 /* Filme.swift in Sources */,
 				6DF7A85F282FBC56006E0915 /* BuscaViewController.swift in Sources */,
+				6DF7A86A28315AC5006E0915 /* Usuario.swift in Sources */,
+				6DF7A8722831C055006E0915 /* FilmesFiltroCollectionViewCell.swift in Sources */,
 				6DF7A82F282FBB28006E0915 /* AppDelegate.swift in Sources */,
+				6DF7A86E2831A5C3006E0915 /* FilmesCollectionViewCell.swift in Sources */,
 				6DF7A863282FBC73006E0915 /* AmigosViewController.swift in Sources */,
+				6DF7A8742831D31A006E0915 /* AmigosTableViewCell.swift in Sources */,
+				6DF7A86C28315DF0006E0915 /* BancoDeDados.swift in Sources */,
 				6DF7A831282FBB28006E0915 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
