@@ -14,11 +14,20 @@ class AmigosViewController: UIViewController {
     @IBOutlet weak var amigosTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let usuario = bancoDeDados.buscaUsuarioLogado(nome: "Andre") {
+        
+        if let usuario = BancoDeDados.shared.buscaUsuarioLogado(nome: "Andre") {
             self.usuarioLogado = usuario
         }
         amigosTableView.delegate = self
         amigosTableView.dataSource = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let telaDetalhes = segue.destination as? DetalhesAmigoViewController {
+            if let sender = sender as? Usuario? {
+                telaDetalhes.amigo = sender
+            }
+        }
     }
 }
 
@@ -36,12 +45,12 @@ extension AmigosViewController: UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    
-    
 }
 
 extension AmigosViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let usuarioLogado = usuarioLogado {
+            performSegue(withIdentifier: "amigosDetalhesSegue", sender: usuarioLogado.listaDeAmigos[indexPath.row])
+        }
     }
 }

@@ -31,13 +31,19 @@ class DetalhesFilmeViewController: UIViewController {
         descricaoLabel.text = filme.descricao
         posterImageView.image = filme.poster
         amigosQueCurtiramLabel.text = montaTextoAmigosQueCurtiram(filme: filme)
-        amigosQueCurtiramLabel.numberOfLines = 0
-        amigosQueCurtiramLabel.lineBreakMode = .byWordWrapping
-        amigosQueCurtiramLabel.sizeToFit()
+        configuraLabel(amigosQueCurtiramLabel)
+        configuraLabel(tituloLabel)
+        configuraLabel(anoLancamentoLabel)
+    }
+    
+    private func configuraLabel(_ label: UILabel) {
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        label.sizeToFit()
     }
     
     private func montaTextoAmigosQueCurtiram(filme: Filme) -> String {
-        let usuarioLogado = bancoDeDados.buscaUsuarioLogado(nome: "Andre")
+        let usuarioLogado = BancoDeDados.shared.buscaUsuarioLogado(nome: "Andre")
         
         guard let amigos = usuarioLogado?.listaDeAmigos else { return "" }
 

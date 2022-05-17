@@ -21,6 +21,7 @@ public class Usuario {
     init(nome: String) {
         self.id = UUID().uuidString
         self.nome = nome
+        setDataUltimoAcesso(dataUltimoAcesso: Date.now)
     }
     
     public func setHumor(humor: String) {

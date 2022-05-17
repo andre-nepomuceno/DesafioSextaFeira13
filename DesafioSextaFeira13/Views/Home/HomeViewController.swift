@@ -7,7 +7,7 @@
 
 import UIKit
 
-public var bancoDeDados = BancoDeDados()
+//public var bancoDeDados = BancoDeDados()
 
 class HomeViewController: UIViewController {
 
@@ -18,12 +18,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let filmesDoUsuario = bancoDeDados.usuarios.first(where: { usuario in
+        if let filmesDoUsuario = BancoDeDados.shared.usuarios.first(where: { usuario in
             usuario.nome == "Andre"
         })?.filmesFavoritos {
             filmesFavoritosDoUsuario.append(contentsOf: filmesDoUsuario)
         }
-        if let amigos = bancoDeDados.usuarios.first(where: { usuario in
+        if let amigos = BancoDeDados.shared.usuarios.first(where: { usuario in
             usuario.nome == "Andre"
         })?.listaDeAmigos {
             listaDeAmigosDoUsuario.append(contentsOf: amigos)

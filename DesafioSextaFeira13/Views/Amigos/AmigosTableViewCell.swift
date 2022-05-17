@@ -28,10 +28,14 @@ class AmigosTableViewCell: UITableViewCell {
         fotoImageView.image = self.amigo?.foto
         nomeLabel.text = self.amigo?.nome
         filmesEmComumLabel.text = "\(buscarFilmesDoAmigo())"
+        filmesEmComumLabel.numberOfLines = 0
+        filmesEmComumLabel.lineBreakMode = .byWordWrapping
+        filmesEmComumLabel.sizeToFit()
+        
     }
     
     private func buscarFilmesDoAmigo() -> String {
-        let filmesUsuario = bancoDeDados.buscaFilmesDoUsuarioLogado(nome: "Andre")
+        let filmesUsuario = BancoDeDados.shared.buscaFilmesDoUsuarioLogado(nome: "Andre")
         guard let amigo = self.amigo else { return "" }
         let filmesDoAmigo = amigo.filmesFavoritos
         

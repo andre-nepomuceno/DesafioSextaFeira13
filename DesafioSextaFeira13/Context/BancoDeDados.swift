@@ -12,20 +12,28 @@ public class BancoDeDados {
     public var filmes: [Filme] = []
     public var usuarios: [Usuario] = []
     
-    init() {
+    static var shared: BancoDeDados = {
+        let instance = BancoDeDados()
+        return instance
+    }()
+    
+    
+    private init() {
         preencheFilmes()
         preencheUsuarios()
     }
     
+    
+    
     public func buscaUsuarioLogado(nome: String) -> Usuario? {
-        let usuario = bancoDeDados.usuarios.first(where: { usuario in
+        let usuario = BancoDeDados.shared.usuarios.first(where: { usuario in
             usuario.nome.uppercased() == nome.uppercased()
         })
         return usuario
     }
     
     public func buscaFilmesDoUsuarioLogado(nome: String) -> [Filme] {
-        guard let usuario = bancoDeDados.usuarios.first(where: { usuario in
+        guard let usuario = BancoDeDados.shared.usuarios.first(where: { usuario in
             usuario.nome.uppercased() == nome.uppercased()
         }) else { return [] }
         
@@ -146,6 +154,7 @@ public class BancoDeDados {
             filme.titulo == "O Fantasma da Ópera"
         }) {
             jessica.filmesFavoritos.append(filme)
+            juliana.filmesFavoritos.append(filme)
         }
         if let filme = filmes.first(where: { filme in
             filme.titulo == "Hellraiser"
@@ -177,6 +186,7 @@ public class BancoDeDados {
             filme.titulo == "Drácula, de Bran Stoker"
         }) {
             jussara.filmesFavoritos.append(filme)
+            adriano.filmesFavoritos.append(filme)
         }
         if let filme = filmes.first(where: { filme in
             filme.titulo == "Carrie, a Estranha"

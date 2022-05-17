@@ -18,5 +18,8 @@ class FilmesCollectionViewCell: UICollectionViewCell {
         self.filme = filme
         tituloLabel.text = self.filme?.titulo
         posterImageView.image = self.filme?.poster
+        tituloLabel.numberOfLines = 0
+        tituloLabel.lineBreakMode = .byWordWrapping
+        tituloLabel.sizeToFit()
     }
 }
