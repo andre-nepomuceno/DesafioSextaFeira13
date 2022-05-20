@@ -9,13 +9,14 @@ import UIKit
 
 class AmigosViewController: UIViewController {
 
+    let service: UsuarioService = UsuarioService()
     var usuarioLogado: Usuario?
     
     @IBOutlet weak var amigosTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let usuario = BancoDeDados.shared.buscaUsuarioLogado(nome: "Andre") {
+        if let usuario = service.buscarUsuarioLogado() {
             self.usuarioLogado = usuario
         }
         amigosTableView.delegate = self
@@ -26,6 +27,7 @@ class AmigosViewController: UIViewController {
         if let telaDetalhes = segue.destination as? DetalhesAmigoViewController {
             if let sender = sender as? Usuario? {
                 telaDetalhes.amigo = sender
+                telaDetalhes.usuarioLogado = usuarioLogado
             }
         }
     }
@@ -39,7 +41,7 @@ extension AmigosViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cellAmigos", for: indexPath) as? AmigosTableViewCell {
             if let usuarioLogado = usuarioLogado {
-                cell.configuraCelula(amigo: usuarioLogado.listaDeAmigos[indexPath.row])
+                cell.configuraCelula(amigo: usuarioLogado.listaDeAmigos[indexPath.row], usuarioLogado: usuarioLogado)
                 return cell
             }
         }

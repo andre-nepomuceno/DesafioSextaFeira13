@@ -15,29 +15,11 @@ public class BancoDeDados {
     static var shared: BancoDeDados = {
         let instance = BancoDeDados()
         return instance
-    }()
-    
+    }()    
     
     private init() {
         preencheFilmes()
         preencheUsuarios()
-    }
-    
-    
-    
-    public func buscaUsuarioLogado(nome: String) -> Usuario? {
-        let usuario = BancoDeDados.shared.usuarios.first(where: { usuario in
-            usuario.nome.uppercased() == nome.uppercased()
-        })
-        return usuario
-    }
-    
-    public func buscaFilmesDoUsuarioLogado(nome: String) -> [Filme] {
-        guard let usuario = BancoDeDados.shared.usuarios.first(where: { usuario in
-            usuario.nome.uppercased() == nome.uppercased()
-        }) else { return [] }
-        
-        return usuario.filmesFavoritos
     }
     
     private func preencheUsuarios() {
@@ -55,7 +37,7 @@ public class BancoDeDados {
             andre.filmesFavoritos.append(filme)
         }
         if let filme = filmes.first(where: { filme in
-            filme.titulo == "A Profecia"
+            filme.titulo == "Os Pássaros"
         }) {
             andre.filmesFavoritos.append(filme)
         }
@@ -175,7 +157,7 @@ public class BancoDeDados {
             adriano.filmesFavoritos.append(filme)
         }
         if let filme = filmes.first(where: { filme in
-            filme.titulo == "A Profecia"
+            filme.titulo == "Os Pássaros"
         }) {
             adriano.filmesFavoritos.append(filme)
         }
@@ -236,188 +218,6 @@ public class BancoDeDados {
     }
     
     private func preencheFilmes() {
-        filmes.append(Filme(
-            titulo: "A Bruxa de Blair",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "ABruxaDeBlair") ?? UIImage(),
-            tipoPublico: .Infantil)
-        )
-        
-        filmes.append(Filme(
-            titulo: "A Coisa",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "ACoisa") ?? UIImage(),
-            tipoPublico: .Infantil)
-        )
-        filmes.append(Filme(
-            titulo: "Alien",
-            anoDeLancemento: 1979,
-            descricao: "",
-            poster: UIImage(named: "Alien") ?? UIImage(),
-            tipoPublico: .Infantil)
-        )
-        filmes.append(Filme(
-            titulo: "A Noite dos Mortos-Vivos",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "ANoiteDosMortosVivos") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "A Profecia",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "AProfecia") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "Carrie, a Estranha",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "Carrie") ?? UIImage(),
-            tipoPublico: .Infantil)
-        )
-        filmes.append(Filme(
-            titulo: "Cemitério Maldito",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "CemiterioMaldito") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "Drácula, de Bran Stoker",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "Dracula") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "Halloween",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "Halloween") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "Hellraiser",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "Hellraiser") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "Invocação do Mal",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "InvocacaoDoMal") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "It",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "It") ?? UIImage(),
-            tipoPublico: .Infantil)
-        )
-        filmes.append(Filme(
-            titulo: "Meia Noite Levarei Sua Alma",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "MeiaNoiteLevareiSuaAlma") ?? UIImage(),
-            tipoPublico: .Infantil)
-        )
-        filmes.append(Filme(
-            titulo: "Nosferatu",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "Nosferatu") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "O bebê de Rosemary",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "OBebeDeRosemary") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "O Chamado",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "OChamadoOriginal") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "O Exorcista",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "OExorcista") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "O Fantasma da Ópera",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "OFantasmaDaOpera") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "O Iluminado",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "OIluminado") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "Os Outros",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "OsOutros") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "Os Pássaros",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "OsPassaros") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "Pânico!",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "Panico") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "Poltergeist",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "Poltergeist") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "Psicose",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "Psicose") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "Sexta-feira 13",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "SextaFeira13") ?? UIImage(),
-            tipoPublico: .Adulto)
-        )
-        filmes.append(Filme(
-            titulo: "Tubarão",
-            anoDeLancemento: 2000,
-            descricao: "",
-            poster: UIImage(named: "Tubarao") ?? UIImage(),
-            tipoPublico: .Infantil)
-        )
+        filmes.append(contentsOf: Filme.criarFilmesDeTerror())
     }
 }

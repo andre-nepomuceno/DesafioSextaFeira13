@@ -13,21 +13,16 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var filmesCollectionView: UICollectionView!
     
+    let service: UsuarioService = UsuarioService()
+    
     var filmesFavoritosDoUsuario: [Filme] = []
-    var listaDeAmigosDoUsuario: [Usuario] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let filmesDoUsuario = BancoDeDados.shared.usuarios.first(where: { usuario in
-            usuario.nome == "Andre"
-        })?.filmesFavoritos {
+        if let filmesDoUsuario = service.buscarUsuarioLogado()?.filmesFavoritos {
             filmesFavoritosDoUsuario.append(contentsOf: filmesDoUsuario)
         }
-        if let amigos = BancoDeDados.shared.usuarios.first(where: { usuario in
-            usuario.nome == "Andre"
-        })?.listaDeAmigos {
-            listaDeAmigosDoUsuario.append(contentsOf: amigos)
-        }
+        
         filmesCollectionView.delegate = self
         filmesCollectionView.dataSource = self
     }

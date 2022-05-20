@@ -15,10 +15,19 @@ class FilmesFiltroCollectionViewCell: UICollectionViewCell {
     
     public func configuraCelula(filme: Filme) {
         self.filme = filme
-        tituloLabel.text = self.filme?.titulo
-        posterImageView.image = self.filme?.poster
-        tituloLabel.numberOfLines = 0
-        tituloLabel.lineBreakMode = .byWordWrapping
-        tituloLabel.sizeToFit()
+        configuraLabel(tituloLabel, filme.titulo)
+        configuraImagem(posterImageView, filme.poster)
+    }
+    
+    private func configuraImagem(_ imageView: UIImageView, _ imagem: UIImage) {
+        imageView.image = imagem
+        imageView.layer.cornerRadius = 20
+    }
+    
+    private func configuraLabel(_ label: UILabel, _ texto: String) {
+        label.text = texto
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        label.sizeToFit()
     }
 }

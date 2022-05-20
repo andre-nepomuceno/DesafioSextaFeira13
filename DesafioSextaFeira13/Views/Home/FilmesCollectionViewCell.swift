@@ -16,10 +16,19 @@ class FilmesCollectionViewCell: UICollectionViewCell {
     
     public func configuraCelula(filme: Filme) {
         self.filme = filme
-        tituloLabel.text = self.filme?.titulo
-        posterImageView.image = self.filme?.poster
+        configuraLabel(texto: filme.titulo)
+        configuraImagem(imagem: filme.poster)
+    }
+    
+    private func configuraLabel(texto: String) {
+        tituloLabel.text = texto
         tituloLabel.numberOfLines = 0
         tituloLabel.lineBreakMode = .byWordWrapping
         tituloLabel.sizeToFit()
+    }
+    
+    private func configuraImagem(imagem: UIImage) {
+        posterImageView.image = imagem
+        posterImageView.layer.cornerRadius = 20
     }
 }

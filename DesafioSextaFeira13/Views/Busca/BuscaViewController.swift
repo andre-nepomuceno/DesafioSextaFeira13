@@ -12,27 +12,20 @@ class BuscaViewController: UIViewController {
     @IBOutlet weak var filmesBuscaTableView: UITableView!
     @IBOutlet weak var tituloFilmeTextfield: UITextField!
     
-    var filmesFavoritosDoUsuario: [Filme] = []
-    var listaDeAmigosDoUsuario: [Usuario] = []
-    
+    let service: UsuarioService = UsuarioService()
+
+    var usuarioLogado: Usuario?
     var filmesEncontrados: [Filme] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.usuarioLogado = service.buscarUsuarioLogado()
         
-        if let filmesDoUsuario = BancoDeDados.shared.usuarios.first(where: { usuario in
-            usuario.nome == "Andre"
-        })?.filmesFavoritos {
-            filmesFavoritosDoUsuario.append(contentsOf: filmesDoUsuario)
-        }
-        
-        if let amigos = BancoDeDados.shared.usuarios.first(where: { usuario in
-            usuario.nome == "Andre"
-        })?.listaDeAmigos {
-            listaDeAmigosDoUsuario.append(contentsOf: amigos)
-        }
         filmesBuscaTableView.delegate = self
         filmesBuscaTableView.dataSource = self
         tituloFilmeTextfield.delegate = self
+        
+        tituloFilmeTextfield.becomeFirstResponder()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -40,6 +33,7 @@ class BuscaViewController: UIViewController {
             if let telaDetalhes = segue.destination as? DetalhesFilmeViewController {
                 guard let filmeEscolhido = sender as? Filme else { return }
                 telaDetalhes.filme = filmeEscolhido
+                telaDetalhes.usuarioLogado = usuarioLogado
             }
         }
     }
@@ -65,9 +59,9 @@ extension BuscaViewController: UITableViewDelegate {
 extension BuscaViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let tituloDigitado = textField.text?.uppercased() else { return true}
+        guard let tituloDigitado = textField.text?.uppercased(), let usuarioLogado = usuarioLogado  else { return true}
         
-        let filmes = filmesFavoritosDoUsuario.filter { filme in
+        let filmes = usuarioLogado.filmesFavoritos.filter { filme in
             filme.titulo.uppercased().contains(tituloDigitado)
         }
         filmesEncontrados = filmes
